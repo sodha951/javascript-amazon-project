@@ -1,4 +1,3 @@
-import { deliveryOptions } from "../../checkout/deliveryOptions.js";
 import { addToCart,cart,loadFromStorage } from "../../data/cart.js";
 
 
