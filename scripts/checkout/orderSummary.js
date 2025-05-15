@@ -48,7 +48,7 @@ export function renderOrderSummary () {
               ${matchingProduct.name}
             </div>
             <div class="product-price">
-              $${formatCurrency(matchingProduct.priceCents)}
+              ${matchingProduct.getPrice()}
             </div>
             <div class="product-quantity js-product-quantity-${matchingProduct.id}">
               <span>
@@ -95,7 +95,7 @@ export function renderOrderSummary () {
       const priceString = deliveryOption.priceCents === 0 ? 'FREE' : `$${formatCurrency(deliveryOption.priceCents)} -`;
 
       const isChecked = deliveryOption.id === cartItem.deliveryOptionId;
-      console.log('Matching?', deliveryOption.id, cartItem.deliveryOptionId, isChecked);
+      
 
       html += `
           <div class="delivery-option js-delivery-option" data-product-id="${matchingProduct.id}" data-delivery-option-id="${deliveryOption.id}">
