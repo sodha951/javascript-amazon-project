@@ -20,7 +20,7 @@ async function loadPage () {
       loadCart(() => {
         // reject('error3')
 
-        // resolve('value3');
+        resolve('value3');
       });
     });
 
